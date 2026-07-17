@@ -3,16 +3,14 @@
     "file": "assets/index-SFc2wnMY.js",
     "name": "index"
   },
+  "_three-jf_WEnyv.js": {
+    "file": "assets/three-jf_WEnyv.js",
+    "name": "three"
+  },
   "node_modules/gsap/ScrollTrigger.js": {
     "file": "assets/ScrollTrigger-88WqrurJ.js",
     "name": "ScrollTrigger",
     "src": "node_modules/gsap/ScrollTrigger.js",
-    "isDynamicEntry": true
-  },
-  "node_modules/three/build/three.module.js": {
-    "file": "assets/three-DL1GCKva.js",
-    "name": "three",
-    "src": "node_modules/three/build/three.module.js",
     "isDynamicEntry": true
   },
   "node_modules/three/examples/jsm/libs/draco/draco_decoder.js": {
@@ -51,28 +49,16 @@
     ]
   },
   "resources/js/watch-showcase.js": {
-    "file": "assets/watch-showcase-BUZSllUG.js",
+    "file": "assets/watch-showcase-CeJAIIXA.js",
     "name": "watch-showcase",
     "src": "resources/js/watch-showcase.js",
     "isEntry": true,
     "imports": [
+      "_three-jf_WEnyv.js",
       "_index-SFc2wnMY.js"
     ],
     "dynamicImports": [
-      "node_modules/three/build/three.module.js",
-      "resources/js/watch/scene.js",
-      "resources/js/watch/watch-model.js",
-      "resources/js/watch/loader.js",
       "node_modules/gsap/ScrollTrigger.js"
-    ]
-  },
-  "resources/js/watch/loader.js": {
-    "file": "assets/loader-DpwiwA35.js",
-    "name": "loader",
-    "src": "resources/js/watch/loader.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "node_modules/three/build/three.module.js"
     ],
     "assets": [
       "assets/draco_decoder-C32yEggz.wasm",
@@ -80,24 +66,6 @@
       "assets/draco_decoder-fzg4nYZr.js",
       "assets/draco_wasm_wrapper-fZCQGLGb.js",
       "assets/draco_decoder-Z1_iN-Ht.wasm"
-    ]
-  },
-  "resources/js/watch/scene.js": {
-    "file": "assets/scene-B3-gNlC5.js",
-    "name": "scene",
-    "src": "resources/js/watch/scene.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "node_modules/three/build/three.module.js"
-    ]
-  },
-  "resources/js/watch/watch-model.js": {
-    "file": "assets/watch-model-ChGWZm2b.js",
-    "name": "watch-model",
-    "src": "resources/js/watch/watch-model.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "node_modules/three/build/three.module.js"
     ]
   }
 }
