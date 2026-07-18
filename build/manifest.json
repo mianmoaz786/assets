@@ -34,12 +34,12 @@
     "src": "node_modules/three/examples/jsm/libs/draco/gltf/draco_wasm_wrapper.js"
   },
   "resources/css/app.css": {
-    "file": "assets/app-BucNQeJ6.css",
+    "file": "assets/app-Odw_Ifyl.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-PCjop5Cw.js",
+    "file": "assets/app-Cy5vtLrp.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
