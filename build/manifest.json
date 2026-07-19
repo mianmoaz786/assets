@@ -1,17 +1,11 @@
 {
-  "_index-SFc2wnMY.js": {
-    "file": "assets/index-SFc2wnMY.js",
-    "name": "index"
+  "_ScrollTrigger-CiEuWA-R.js": {
+    "file": "assets/ScrollTrigger-CiEuWA-R.js",
+    "name": "ScrollTrigger"
   },
   "_three-DG5m80zP.js": {
     "file": "assets/three-DG5m80zP.js",
     "name": "three"
-  },
-  "node_modules/gsap/ScrollTrigger.js": {
-    "file": "assets/ScrollTrigger-88WqrurJ.js",
-    "name": "ScrollTrigger",
-    "src": "node_modules/gsap/ScrollTrigger.js",
-    "isDynamicEntry": true
   },
   "node_modules/three/examples/jsm/libs/draco/draco_decoder.js": {
     "file": "assets/draco_decoder-fzg4nYZr.js",
@@ -34,31 +28,27 @@
     "src": "node_modules/three/examples/jsm/libs/draco/gltf/draco_wasm_wrapper.js"
   },
   "resources/css/app.css": {
-    "file": "assets/app-D5_caUE6.css",
+    "file": "assets/app-F8P6Nkyo.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-Cy5vtLrp.js",
+    "file": "assets/app-BCLAs1B2.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "imports": [
-      "_index-SFc2wnMY.js",
-      "node_modules/gsap/ScrollTrigger.js"
+      "_ScrollTrigger-CiEuWA-R.js"
     ]
   },
   "resources/js/watch-showcase.js": {
-    "file": "assets/watch-showcase-D9zM1Wag.js",
+    "file": "assets/watch-showcase-BHFTquWS.js",
     "name": "watch-showcase",
     "src": "resources/js/watch-showcase.js",
     "isEntry": true,
     "imports": [
       "_three-DG5m80zP.js",
-      "_index-SFc2wnMY.js"
-    ],
-    "dynamicImports": [
-      "node_modules/gsap/ScrollTrigger.js"
+      "_ScrollTrigger-CiEuWA-R.js"
     ],
     "assets": [
       "assets/draco_decoder-C32yEggz.wasm",
