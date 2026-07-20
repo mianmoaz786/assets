@@ -42,14 +42,20 @@
       "_ScrollTrigger-BiKP9tGb.js"
     ]
   },
+  "resources/js/landing-misc.js": {
+    "file": "assets/landing-misc-CWIamnjd.js",
+    "name": "landing-misc",
+    "src": "resources/js/landing-misc.js",
+    "isEntry": true
+  },
   "resources/js/watch-showcase.js": {
-    "file": "assets/watch-showcase-tnI8IsBh.js",
+    "file": "assets/watch-showcase-CJiOaWAq.js",
     "name": "watch-showcase",
     "src": "resources/js/watch-showcase.js",
     "isEntry": true,
     "imports": [
-      "_ScrollTrigger-BiKP9tGb.js",
-      "_three-BepUKFO9.js"
+      "_three-BepUKFO9.js",
+      "_ScrollTrigger-BiKP9tGb.js"
     ],
     "dynamicImports": [
       "_ScrollTrigger-BiKP9tGb.js"
