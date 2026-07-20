@@ -28,7 +28,7 @@
     "src": "node_modules/three/examples/jsm/libs/draco/gltf/draco_wasm_wrapper.js"
   },
   "resources/css/app.css": {
-    "file": "assets/app-modb-OE_.css",
+    "file": "assets/app-PUFAfPZl.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -42,7 +42,7 @@
     ]
   },
   "resources/js/watch-showcase.js": {
-    "file": "assets/watch-showcase-DkKzrxm-.js",
+    "file": "assets/watch-showcase-DvEJ947P.js",
     "name": "watch-showcase",
     "src": "resources/js/watch-showcase.js",
     "isEntry": true,
