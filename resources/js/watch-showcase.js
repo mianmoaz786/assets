@@ -700,7 +700,7 @@ async function init() {
                 animModel.rotation.y += (targetRY - animModel.rotation.y) * 0.015;
                 animModel.rotation.x += (targetRX - animModel.rotation.x) * 0.015;
             } else {
-                if (!hover.hovering) animModel.rotation.y += 0.003 * spd;
+                if (!hover.hovering) animModel.rotation.y += 0.005 * spd;
                 const scrollY = t * Math.PI * 2;
                 const scrollX = Math.sin(t * Math.PI) * 0.12;
                 animModel.rotation.y += (scrollY + hover.targetRY * 0.3 - animModel.rotation.y) * lerp;
