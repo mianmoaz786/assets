@@ -4,8 +4,8 @@
     "name": "ScrollTrigger",
     "isDynamicEntry": true
   },
-  "_three-BepUKFO9.js": {
-    "file": "assets/three-BepUKFO9.js",
+  "_three-DdbyhUMo.js": {
+    "file": "assets/three-DdbyhUMo.js",
     "name": "three"
   },
   "node_modules/three/examples/jsm/libs/draco/draco_decoder.js": {
@@ -49,12 +49,12 @@
     "isEntry": true
   },
   "resources/js/watch-showcase.js": {
-    "file": "assets/watch-showcase-_81_NZ0w.js",
+    "file": "assets/watch-showcase-CGqhN08g.js",
     "name": "watch-showcase",
     "src": "resources/js/watch-showcase.js",
     "isEntry": true,
     "imports": [
-      "_three-BepUKFO9.js",
+      "_three-DdbyhUMo.js",
       "_ScrollTrigger-BiKP9tGb.js"
     ],
     "dynamicImports": [

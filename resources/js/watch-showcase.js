@@ -302,6 +302,11 @@ const MODEL_SWATCHES = {
 };
 
 async function init() {
+    const shouldDelay = window.innerWidth < 1400 || navigator.connection?.effectiveType === '2g' || navigator.connection?.saveData;
+    if (shouldDelay) {
+        await new Promise(resolve => setTimeout(resolve, 700));
+    }
+
     if (!isWebGLSupported()) { const fb = document.querySelector('.no-webgl-fallback'); if (fb) fb.style.display = 'flex'; hideLoader(); return; }
     setProgress(10);
     const canvas = F('watch-canvas'); if (!canvas) return;
@@ -579,7 +584,7 @@ async function init() {
             console.log('[watch] Mobile — auto-advance disabled');
             return;
         }
-        autoTimer = setInterval(() => { if (window.__modelScrollProgress > 0.05 || switching) return; advanceModel(); }, 10000);
+        autoTimer = setInterval(() => { if (window.__modelScrollProgress > 0.05 || switching) return; advanceModel(); }, 20000);
     }
     function stopAutoSwitch() { if (autoTimer) { clearInterval(autoTimer); autoTimer = null; } }
 
@@ -650,6 +655,7 @@ async function init() {
 
     let cameraLookAt = new Vector3(0, 0, 0);
     let smoothP = 0; // smoothed scroll progress
+    let lastLabelUpdate = 0;
 
     function updateLabels() {
         const w = renderer.domElement.clientWidth, h = renderer.domElement.clientHeight;
@@ -717,7 +723,11 @@ async function init() {
             updateHands(animModel);
             const rotor = animModel.getObjectByName('rotor');
             if (rotor) rotor.rotation.z += dt * 4;
-            updateLabels();
+            const now = performance.now();
+            if (!lastLabelUpdate || now - lastLabelUpdate > (tier === 'minimal' ? 250 : 150)) {
+                updateLabels();
+                lastLabelUpdate = now;
+            }
         }
 
         // -- PHASE 2: Fade out --
@@ -733,7 +743,11 @@ async function init() {
             camera.position.lerp(posCurve.getPointAt(1), 0.04);
             cameraLookAt.lerp(lookCurve.getPointAt(1), 0.04);
             camera.lookAt(cameraLookAt);
-            updateLabels();
+            const now = performance.now();
+            if (!lastLabelUpdate || now - lastLabelUpdate > (tier === 'minimal' ? 250 : 150)) {
+                updateLabels();
+                lastLabelUpdate = now;
+            }
         }
 
         // -- PHASE 3: Content --
