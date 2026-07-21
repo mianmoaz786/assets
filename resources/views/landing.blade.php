@@ -10,7 +10,7 @@
         $jsA = $m['resources/js/app.js']['file'] ?? null;
         $jsW = $m['resources/js/watch-showcase.js']['file'] ?? null;
         $jsM = $m['resources/js/landing-misc.js']['file'] ?? null;
-        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@01f1fda';
+        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@bf5eaa8';
     @endphp
     <title>{{ $config['brand'] }} {{ $config['model'] }} — {{ $config['tagline'] ?? 'Precision Redefined' }}</title>
     <meta name="description" content="{{ $config['description'] ?? $config['model'] . ' by ' . $config['brand'] . '. Precision redefined. Swiss-made luxury timepiece.' }}">
@@ -192,7 +192,8 @@
         <div class="absolute inset-0 border-b border-white/[0.04] pointer-events-none" :class="scrolled ? 'opacity-100' : 'opacity-0'"></div>
         <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/15 to-transparent pointer-events-none"></div>
         <div class="absolute top-0 left-[20%] right-[20%] h-px bg-gradient-to-r from-transparent via-gold/10 to-transparent pointer-events-none"></div>
-        <div class="relative w-full px-6 sm:px-8 md:px-[clamp(2rem,3vw,4rem)] py-4 md:py-5 flex items-center justify-between pointer-events-auto">
+         <div class="relative w-full px-6 sm:px-8 md:px-[clamp(2rem,3vw,4rem)] py-4 md:py-5 flex items-center justify-between pointer-events-auto"
+              style="display:flex;align-items:center;justify-content:space-between;width:100%">
             <div class="flex items-center gap-3">
                 <a href="/" class="font-serif text-xl md:text-2xl font-semibold tracking-[0.02em] bg-gradient-to-br from-[#f0ece4] via-[#f0ece4] to-gold bg-clip-text text-transparent hover:to-gold-hover transition-all duration-300" aria-label="CHRONOS home">CHRONOS</a>
                 <span class="hidden md:block w-px h-4 bg-gold/20"></span>
