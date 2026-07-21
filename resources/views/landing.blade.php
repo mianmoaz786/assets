@@ -10,7 +10,7 @@
         $jsA = $m['resources/js/app.js']['file'] ?? null;
         $jsW = $m['resources/js/watch-showcase.js']['file'] ?? null;
         $jsM = $m['resources/js/landing-misc.js']['file'] ?? null;
-        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@bf5eaa8';
+        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@9390467';
     @endphp
     <title>{{ $config['brand'] }} {{ $config['model'] }} — {{ $config['tagline'] ?? 'Precision Redefined' }}</title>
     <meta name="description" content="{{ $config['description'] ?? $config['model'] . ' by ' . $config['brand'] . '. Precision redefined. Swiss-made luxury timepiece.' }}">
@@ -185,10 +185,11 @@
     <div x-data="{ navOpen: false, scrolled: false }">
 
     <!-- Fixed Navbar -->
-    <nav x-on:scroll.window="scrolled = window.scrollY > 80"
-         class="fixed top-0 left-0 right-0 z-[10001] transition-all duration-500"
-         :class="scrolled ? 'bg-[#0c0b0a]/70 backdrop-blur-2xl shadow-[0_1px_0_rgba(201,169,110,0.06)]' : 'bg-[#0c0b0a]/20 backdrop-blur-xl'"
-         aria-label="Main navigation">
+     <nav x-on:scroll.window="scrolled = window.scrollY > 80"
+          class="fixed top-0 left-0 right-0 z-[10001] transition-all duration-500"
+          :class="scrolled ? 'bg-[#0c0b0a]/70 backdrop-blur-2xl shadow-[0_1px_0_rgba(201,169,110,0.06)]' : 'bg-[#0c0b0a]/20 backdrop-blur-xl'"
+          aria-label="Main navigation"
+          style="position:fixed;top:0;left:0;right:0;z-index:10001">
         <div class="absolute inset-0 border-b border-white/[0.04] pointer-events-none" :class="scrolled ? 'opacity-100' : 'opacity-0'"></div>
         <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/15 to-transparent pointer-events-none"></div>
         <div class="absolute top-0 left-[20%] right-[20%] h-px bg-gradient-to-r from-transparent via-gold/10 to-transparent pointer-events-none"></div>
