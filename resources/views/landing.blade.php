@@ -10,7 +10,7 @@
         $jsA = $m['resources/js/app.js']['file'] ?? null;
         $jsW = $m['resources/js/watch-showcase.js']['file'] ?? null;
         $jsM = $m['resources/js/landing-misc.js']['file'] ?? null;
-        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@79bdda3';
+        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@329e840';
     @endphp
     <title>{{ $config['brand'] }} {{ $config['model'] }} — {{ $config['tagline'] ?? 'Precision Redefined' }}</title>
     <meta name="description" content="{{ $config['description'] ?? $config['model'] . ' by ' . $config['brand'] . '. Precision redefined. Swiss-made luxury timepiece.' }}">
@@ -274,7 +274,7 @@
         <div class="hero-left relative z-10 px-6 sm:px-8 md:px-[clamp(2rem,3vw,4rem)] text-center md:text-left pointer-events-none"
              style="margin:0;padding-bottom:0;min-width:0;overflow:visible;align-self:center;grid-column:1">
             <span class="block text-[0.5rem] tracking-[0.45em] uppercase text-gold/50 mb-2 pointer-events-none" data-animate="hero-brand">CHRONOS</span>
-            <h1 data-animate="hero-brand" class="font-serif text-[clamp(1.6rem,4vw,3rem)] font-semibold leading-none tracking-[0.02em] bg-gradient-to-br from-[#f0ece4] via-[#f0ece4] to-gold bg-clip-text text-transparent pointer-events-none whitespace-nowrap">{{ $config['model'] }}</h1>
+            <h1 data-animate="hero-brand" class="font-serif text-[clamp(1.6rem,4vw,3rem)] font-semibold leading-none tracking-[0.02em] bg-gradient-to-br from-[#f0ece4] via-[#f0ece4] to-gold bg-clip-text text-transparent pointer-events-none">{{ $config['model'] }}</h1>
             <p data-animate="hero-tagline" class="mt-2 text-[clamp(0.55rem,0.8vw,0.75rem)] font-light tracking-[0.35em] uppercase text-[#8a857f] pointer-events-none">{{ $config['tagline'] ?? 'Precision Redefined' }}</p>
         </div>
             <div class="hero-right relative z-10 px-6 sm:px-8 md:px-[clamp(2rem,3vw,4rem)] text-center md:text-right pointer-events-none"
