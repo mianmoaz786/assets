@@ -10,7 +10,7 @@
         $jsA = $m['resources/js/app.js']['file'] ?? null;
         $jsW = $m['resources/js/watch-showcase.js']['file'] ?? null;
         $jsM = $m['resources/js/landing-misc.js']['file'] ?? null;
-        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@d05378b';
+        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@3379c32';
     @endphp
     <title>{{ $config['brand'] }} {{ $config['model'] }} — {{ $config['tagline'] ?? 'Precision Redefined' }}</title>
     <meta name="description" content="{{ $config['description'] ?? $config['model'] . ' by ' . $config['brand'] . '. Precision redefined. Swiss-made luxury timepiece.' }}">
@@ -127,7 +127,7 @@
         html, body { background-color: #050505; color: #f0ece4; margin: 0; padding: 0; font-family:'Inter',ui-sans-serif,system-ui,sans-serif; }
         /* Critical above-fold styles (renders before full CSS loads) */
         .font-serif { font-family: Georgia, ui-serif, serif; }
-        .hero-section { position: relative; height: 100vh !important; overflow: hidden !important; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .hero-section { position: relative; height: 100vh !important; overflow: hidden !important; display: flex; flex-direction: column; align-items: center; justify-content: center; contain: strict; }
         @media (min-width: 768px) { .hero-section { flex-direction: row; justify-content: space-between; } }
         /* Prevent layout shift: pre-set hero column widths/margins to match Tailwind values */
         .hero-left, .hero-right { width: 100%; margin-top: 0; margin-bottom: 0; padding-bottom: 0; }
@@ -267,7 +267,7 @@
     </div>
 
     <section class="hero-section relative overflow-hidden flex flex-col md:flex-row items-center justify-center md:justify-between" aria-label="Hero showcase"
-             style="position:relative;height:100vh !important;min-height:100vh !important;max-height:100vh !important;overflow:hidden !important;">
+              style="position:relative;height:100vh !important;min-height:100vh !important;max-height:100vh !important;overflow:hidden !important;contain:strict">
         <div class="hero-left relative z-10 w-full md:w-1/3 px-6 sm:px-8 md:px-[clamp(2rem,3vw,4rem)] text-center md:text-left pointer-events-none mt-auto md:mt-0 pb-0 md:pb-0" style="margin-top:0;margin-bottom:0;padding-bottom:0">
             <span class="block text-[0.5rem] tracking-[0.45em] uppercase text-gold/50 mb-2 pointer-events-none" data-animate="hero-brand">CHRONOS</span>
             <h1 data-animate="hero-brand" class="font-serif text-[clamp(1.6rem,4vw,3rem)] font-semibold leading-none tracking-[0.02em] bg-gradient-to-br from-[#f0ece4] via-[#f0ece4] to-gold bg-clip-text text-transparent pointer-events-none whitespace-nowrap">{{ $config['model'] }}</h1>
