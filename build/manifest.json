@@ -28,7 +28,7 @@
     "src": "node_modules/three/examples/jsm/libs/draco/gltf/draco_wasm_wrapper.js"
   },
   "resources/css/app.css": {
-    "file": "assets/app-Cm0KX6i-.css",
+    "file": "assets/app-Ca-5oEA5.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -48,7 +48,7 @@
     "isEntry": true
   },
   "resources/js/watch-showcase.js": {
-    "file": "assets/watch-showcase-BsYzS6XF.js",
+    "file": "assets/watch-showcase-S204vla1.js",
     "name": "watch-showcase",
     "src": "resources/js/watch-showcase.js",
     "isEntry": true,

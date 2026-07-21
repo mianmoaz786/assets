@@ -10,7 +10,7 @@
         $jsA = $m['resources/js/app.js']['file'] ?? null;
         $jsW = $m['resources/js/watch-showcase.js']['file'] ?? null;
         $jsM = $m['resources/js/landing-misc.js']['file'] ?? null;
-        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@06531a8';
+        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@01f1fda';
     @endphp
     <title>{{ $config['brand'] }} {{ $config['model'] }} — {{ $config['tagline'] ?? 'Precision Redefined' }}</title>
     <meta name="description" content="{{ $config['description'] ?? $config['model'] . ' by ' . $config['brand'] . '. Precision redefined. Swiss-made luxury timepiece.' }}">
@@ -289,7 +289,7 @@
                         <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"/></svg>
                     </button>
                     <div class="relative flex items-center gap-1.5 sm:gap-4 md:gap-6 lg:gap-8 px-1 sm:px-2 overflow-x-auto overflow-y-hidden tab-container scroll-smooth snap-x snap-mandatory no-scrollbar" x-ref="tabContainer">
-                        <div id="model-indicator" class="absolute bottom-0 h-[2px] bg-gold rounded-full transition-[transform] duration-300 ease-out pointer-events-none" style="left:0;width:0"></div>
+                        <div id="model-indicator" class="absolute bottom-0 h-[2px] bg-gold rounded-full pointer-events-none" style="left:0;width:0"></div>
                         <button data-model="golden" class="model-switcher flex-shrink-0 snap-center text-[0.35rem] sm:text-[0.4rem] md:text-[0.45rem] tracking-[0.2em] uppercase text-[#8a857f] whitespace-nowrap py-0.5 sm:py-1 hover:text-[#f0ece4]" aria-label="Golden Watch">Golden</button>
                         <button data-model="roman" class="model-switcher flex-shrink-0 snap-center text-[0.35rem] sm:text-[0.4rem] md:text-[0.45rem] tracking-[0.2em] uppercase text-[#8a857f] whitespace-nowrap py-0.5 sm:py-1 hover:text-[#f0ece4]" aria-label="Roman Watch">Roman</button>
                         <button data-model="invicta" class="model-switcher flex-shrink-0 snap-center text-[0.35rem] sm:text-[0.4rem] md:text-[0.45rem] tracking-[0.2em] uppercase text-[#8a857f] whitespace-nowrap py-0.5 sm:py-1 hover:text-[#f0ece4]" aria-label="Sport Watch">Sport</button>
