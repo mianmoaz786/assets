@@ -10,7 +10,7 @@
         $jsA = $m['resources/js/app.js']['file'] ?? null;
         $jsW = $m['resources/js/watch-showcase.js']['file'] ?? null;
         $jsM = $m['resources/js/landing-misc.js']['file'] ?? null;
-        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@3379c32';
+        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@286211e';
     @endphp
     <title>{{ $config['brand'] }} {{ $config['model'] }} — {{ $config['tagline'] ?? 'Precision Redefined' }}</title>
     <meta name="description" content="{{ $config['description'] ?? $config['model'] . ' by ' . $config['brand'] . '. Precision redefined. Swiss-made luxury timepiece.' }}">
@@ -120,8 +120,8 @@
     @endif
 
     <style>
-        @font-face { font-family:'Inter'; font-style:normal; font-weight:300 600; font-display:swap; src:url('{{ $a }}/fonts/inter-variable.woff2') format('woff2-variations'); }
-        @font-face { font-family:'Playfair Display'; font-style:normal; font-weight:400 700; font-display:swap; src:url('{{ $a }}/fonts/playfair-variable.woff2') format('woff2-variations'); }
+        @font-face { font-family:'Inter'; font-style:normal; font-weight:300 600; font-display:optional; src:url('{{ $a }}/fonts/inter-variable.woff2') format('woff2-variations'); }
+        @font-face { font-family:'Playfair Display'; font-style:normal; font-weight:400 700; font-display:optional; src:url('{{ $a }}/fonts/playfair-variable.woff2') format('woff2-variations'); }
         [x-cloak] { display: none !important; }
         html { overflow-x: hidden; }
         html, body { background-color: #050505; color: #f0ece4; margin: 0; padding: 0; font-family:'Inter',ui-sans-serif,system-ui,sans-serif; }
