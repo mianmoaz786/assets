@@ -10,7 +10,7 @@
         $jsA = $m['resources/js/app.js']['file'] ?? null;
         $jsW = $m['resources/js/watch-showcase.js']['file'] ?? null;
         $jsM = $m['resources/js/landing-misc.js']['file'] ?? null;
-        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@041d6a3';
+        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@d84ab4e';
     @endphp
     <title>{{ $config['brand'] }} {{ $config['model'] }} — {{ $config['tagline'] ?? 'Precision Redefined' }}</title>
     <meta name="description" content="{{ $config['description'] ?? $config['model'] . ' by ' . $config['brand'] . '. Precision redefined. Swiss-made luxury timepiece.' }}">
@@ -336,7 +336,7 @@
     <div id="content-reveal">
 
     <section class="relative h-[70vh] md:h-[85vh] overflow-hidden bg-[#050505]" id="model-hero-section" aria-label="Featured model">
-        <img id="model-hero-img" class="absolute inset-0 w-full h-full object-cover opacity-60 md:opacity-70 transition-[opacity,transform] duration-700" src="{{ $a }}/images/models/invicta.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" sizes="(max-width: 768px) 100vw, 50vw">
+        <img id="model-hero-img" class="absolute inset-0 w-full h-full object-cover opacity-60 md:opacity-70 transition-[opacity,transform] duration-700" src="{{ $a }}/images/models/invicta.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" sizes="(max-width: 768px) 100vw, 50vw" crossorigin="anonymous">
         <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
         <div class="absolute bottom-10 md:bottom-16 left-1/2 -translate-x-1/2 text-center w-full px-6">
             <span class="text-[0.5rem] tracking-[0.4em] uppercase text-gold">Featured Timepiece</span>
