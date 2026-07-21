@@ -10,7 +10,7 @@
         $jsA = $m['resources/js/app.js']['file'] ?? null;
         $jsW = $m['resources/js/watch-showcase.js']['file'] ?? null;
         $jsM = $m['resources/js/landing-misc.js']['file'] ?? null;
-        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@1e1c137';
+        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@3c2f14f';
     @endphp
     <title>{{ $config['brand'] }} {{ $config['model'] }} — {{ $config['tagline'] ?? 'Precision Redefined' }}</title>
     <meta name="description" content="{{ $config['description'] ?? $config['model'] . ' by ' . $config['brand'] . '. Precision redefined. Swiss-made luxury timepiece.' }}">
@@ -267,7 +267,7 @@
     </div>
 
     <section class="hero-section relative overflow-hidden" aria-label="Hero showcase"
-               style="position:relative;height:100vh !important;min-height:100vh !important;max-height:100vh !important;overflow:hidden !important;contain:strict;display:grid;grid-template-columns:1fr;align-items:center">
+               style="position:relative;height:100vh !important;min-height:100vh !important;max-height:100vh !important;overflow:hidden !important;contain:strict;display:grid;align-items:center">
         <style>
             @media (min-width: 768px) { .hero-section { grid-template-columns: 1fr 1fr 1fr; } }
         </style>
