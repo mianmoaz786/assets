@@ -10,7 +10,7 @@
         $jsA = $m['resources/js/app.js']['file'] ?? null;
         $jsW = $m['resources/js/watch-showcase.js']['file'] ?? null;
         $jsM = $m['resources/js/landing-misc.js']['file'] ?? null;
-        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@02ca894';
+        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@7538e29';
     @endphp
     <title>{{ $config['brand'] }} {{ $config['model'] }} — {{ $config['tagline'] ?? 'Precision Redefined' }}</title>
     <meta name="description" content="{{ $config['description'] ?? $config['model'] . ' by ' . $config['brand'] . '. Precision redefined. Swiss-made luxury timepiece.' }}">
@@ -127,8 +127,13 @@
         html, body { background-color: #050505; color: #f0ece4; margin: 0; padding: 0; font-family:'Inter',ui-sans-serif,system-ui,sans-serif; }
         /* Critical above-fold styles (renders before full CSS loads) */
         .font-serif { font-family: Georgia, ui-serif, serif; }
-        .hero-section { position: relative; height: 100vh; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .hero-section { position: relative; height: 100vh; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; contain: layout; }
         @media (min-width: 768px) { .hero-section { flex-direction: row; justify-content: space-between; } }
+        /* Prevent layout shift: pre-set hero column widths/margins to match Tailwind values */
+        .hero-left, .hero-right { width: 100%; margin-top: 0; margin-bottom: 0; padding-bottom: 0; }
+        @media (min-width: 768px) {
+            .hero-left, .hero-right { width: 33.3333%; }
+        }
         #watch-canvas { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; cursor: grab; }
         #scroll-progress { will-change: transform; }
         [data-animate] { will-change: transform, opacity; }
@@ -261,14 +266,14 @@
 
     </div>
 
-    <section class="hero-section relative overflow-hidden flex flex-col md:flex-row items-center justify-center md:justify-between" aria-label="Hero showcase">
-        <div class="relative z-10 w-full md:w-1/3 px-6 sm:px-8 md:px-[clamp(2rem,3vw,4rem)] text-center md:text-left pointer-events-none mt-auto md:mt-0 pb-0 md:pb-0">
+    <section class="hero-section relative overflow-hidden flex flex-col md:flex-row items-center justify-center md:justify-between" aria-label="Hero showcase" style="height:100vh">
+        <div class="hero-left relative z-10 w-full md:w-1/3 px-6 sm:px-8 md:px-[clamp(2rem,3vw,4rem)] text-center md:text-left pointer-events-none mt-auto md:mt-0 pb-0 md:pb-0" style="margin-top:0;margin-bottom:0;padding-bottom:0">
             <span class="block text-[0.5rem] tracking-[0.45em] uppercase text-gold/50 mb-2 pointer-events-none" data-animate="hero-brand">CHRONOS</span>
-            <h1 data-animate="hero-brand" class="font-serif text-[clamp(1.6rem,4vw,3rem)] font-semibold leading-none tracking-[0.02em] bg-gradient-to-br from-[#f0ece4] via-[#f0ece4] to-gold bg-clip-text text-transparent pointer-events-none">{{ $config['model'] }}</h1>
+            <h1 data-animate="hero-brand" class="font-serif text-[clamp(1.6rem,4vw,3rem)] font-semibold leading-none tracking-[0.02em] bg-gradient-to-br from-[#f0ece4] via-[#f0ece4] to-gold bg-clip-text text-transparent pointer-events-none whitespace-nowrap">{{ $config['model'] }}</h1>
             <p data-animate="hero-tagline" class="mt-2 text-[clamp(0.55rem,0.8vw,0.75rem)] font-light tracking-[0.35em] uppercase text-[#8a857f] pointer-events-none">{{ $config['tagline'] ?? 'Precision Redefined' }}</p>
         </div>
-            <div class="relative z-10 w-full md:w-1/3 px-6 sm:px-8 md:px-[clamp(2rem,3vw,4rem)] text-center md:text-right pointer-events-none mt-4 md:mt-0 md:ml-auto mb-auto md:mb-0">
-                <p data-animate="hero-price" class="font-serif text-[clamp(1rem,1.5vw,1.3rem)] text-gold pointer-events-none">{{ $config['price'] }}</p>
+            <div class="hero-right relative z-10 w-full md:w-1/3 px-6 sm:px-8 md:px-[clamp(2rem,3vw,4rem)] text-center md:text-right pointer-events-none mt-4 md:mt-0 md:ml-auto mb-auto md:mb-0" style="margin-top:0;margin-bottom:0">
+                <p data-animate="hero-price" class="font-serif text-[clamp(1rem,1.5vw,1.3rem)] text-gold pointer-events-none whitespace-nowrap">{{ $config['price'] }}</p>
                 <div class="mt-4 pointer-events-auto" data-animate="hero-cta">
                     <a href="#cta" data-magnetic class="inline-block px-6 py-3 bg-gold text-[#050505] text-[0.65rem] font-semibold tracking-[0.2em] uppercase rounded-sm transition-transform duration-300 hover:bg-gold-hover hover:shadow-[0_8px_32px_rgba(201,169,110,0.3)]" aria-label="Enquire about {{ $config['model'] }}">Enquire Now</a>
                 </div>
