@@ -10,7 +10,7 @@
         $jsA = $m['resources/js/app.js']['file'] ?? null;
         $jsW = $m['resources/js/watch-showcase.js']['file'] ?? null;
         $jsM = $m['resources/js/landing-misc.js']['file'] ?? null;
-        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@1bfa258';
+        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@d587f8c';
     @endphp
     <title>{{ $config['brand'] }} {{ $config['model'] }} — {{ $config['tagline'] ?? 'Precision Redefined' }}</title>
     <meta name="description" content="{{ $config['description'] ?? $config['model'] . ' by ' . $config['brand'] . '. Precision redefined. Swiss-made luxury timepiece.' }}">
@@ -282,8 +282,8 @@
                     <a href="#cta" data-magnetic class="inline-block px-6 py-3 bg-gold text-[#050505] text-[0.65rem] font-semibold tracking-[0.2em] uppercase rounded-sm transition-transform duration-300 hover:bg-gold-hover hover:shadow-[0_8px_32px_rgba(201,169,110,0.3)]" aria-label="Enquire about {{ $config['model'] }}">Enquire Now</a>
                 </div>
             </div>
-            <div class="absolute bottom-16 sm:bottom-20 left-1/2 -translate-x-1/2 z-20 pointer-events-auto carousel-container w-full max-w-[98vw] sm:max-w-none px-1 sm:px-0" data-animate="hero-cta"
-                 style="position:absolute;bottom:5rem;left:50%;transform:translateX(-50%);z-index:20">
+            <div class="absolute bottom-16 sm:bottom-20 left-1/2 z-20 pointer-events-auto carousel-container w-full max-w-[98vw] sm:max-w-none px-1 sm:px-0" data-animate="hero-cta"
+                 style="position:absolute;bottom:5rem;left:50%;z-index:20">
                 <span class="block text-center text-[0.35rem] sm:text-[0.4rem] tracking-[0.35em] uppercase text-[#8a857f] mb-1 sm:mb-1.5">Select Variant</span>
                 <div class="flex items-center gap-1 sm:gap-2 bg-[#0c0b0a]/60 backdrop-blur-xl border border-white/[0.04] rounded-full px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 transition-all duration-700 carousel-strip w-full sm:w-fit mx-auto max-w-full">
                     <button class="carousel-btn carousel-prev flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center rounded-full border border-white/[0.08] text-[#8a857f] hover:text-gold hover:border-gold/40 transition-all duration-200" aria-label="Previous model">
