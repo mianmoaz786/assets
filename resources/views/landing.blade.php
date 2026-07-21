@@ -10,7 +10,7 @@
         $jsA = $m['resources/js/app.js']['file'] ?? null;
         $jsW = $m['resources/js/watch-showcase.js']['file'] ?? null;
         $jsM = $m['resources/js/landing-misc.js']['file'] ?? null;
-        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@4474c62';
+        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@02ca894';
     @endphp
     <title>{{ $config['brand'] }} {{ $config['model'] }} — {{ $config['tagline'] ?? 'Precision Redefined' }}</title>
     <meta name="description" content="{{ $config['description'] ?? $config['model'] . ' by ' . $config['brand'] . '. Precision redefined. Swiss-made luxury timepiece.' }}">
@@ -110,7 +110,8 @@
     <link rel="preload" href="{{ $a }}/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
     <link rel="preload" href="{{ $a }}/fonts/playfair-variable.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
     @if($jsW)<link rel="modulepreload" href="{{ $a }}/build/{{ $jsW }}" crossorigin>@endif
-    @if($css)<link rel="stylesheet" href="{{ $a }}/build/{{ $css }}">@endif
+    @if($css)<link rel="stylesheet" href="{{ $a }}/build/{{ $css }}" media="print" onload="this.media='all';this.onload=null">@endif
+    <noscript><link rel="stylesheet" href="{{ $a }}/build/{{ $css }}"></noscript>
     @if($jsA)<script type="module" src="{{ $a }}/build/{{ $jsA }}" defer></script>@endif
     <script>window.addEventListener('load',function(){setTimeout(function(){import('{{ $a }}/build/{{ $jsW }}').catch(function(e){console.error('3D init failed:',e)})},300)})</script>
 
@@ -124,6 +125,8 @@
         [x-cloak] { display: none !important; }
         html { overflow-x: hidden; }
         html, body { background-color: #050505; color: #f0ece4; margin: 0; padding: 0; font-family:'Inter',ui-sans-serif,system-ui,sans-serif; }
+        /* Critical above-fold styles (renders before full CSS loads) */
+        .font-serif { font-family: Georgia, ui-serif, serif; }
         .hero-section { position: relative; height: 100vh; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; }
         @media (min-width: 768px) { .hero-section { flex-direction: row; justify-content: space-between; } }
         #watch-canvas { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; cursor: grab; }
@@ -176,7 +179,7 @@
 
     <!-- Fixed Navbar -->
     <nav x-on:scroll.window="scrolled = window.scrollY > 80"
-         class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+         class="fixed top-0 left-0 right-0 z-[10001] transition-all duration-500"
          :class="scrolled ? 'bg-[#0c0b0a]/70 backdrop-blur-2xl shadow-[0_1px_0_rgba(201,169,110,0.06)]' : 'bg-[#0c0b0a]/20 backdrop-blur-xl'"
          aria-label="Main navigation">
         <div class="absolute inset-0 border-b border-white/[0.04] pointer-events-none" :class="scrolled ? 'opacity-100' : 'opacity-0'"></div>
