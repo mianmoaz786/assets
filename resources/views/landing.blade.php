@@ -10,7 +10,7 @@
         $jsA = $m['resources/js/app.js']['file'] ?? null;
         $jsW = $m['resources/js/watch-showcase.js']['file'] ?? null;
         $jsM = $m['resources/js/landing-misc.js']['file'] ?? null;
-        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@3c2f14f';
+        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@79bdda3';
     @endphp
     <title>{{ $config['brand'] }} {{ $config['model'] }} — {{ $config['tagline'] ?? 'Precision Redefined' }}</title>
     <meta name="description" content="{{ $config['description'] ?? $config['model'] . ' by ' . $config['brand'] . '. Precision redefined. Swiss-made luxury timepiece.' }}">
@@ -272,22 +272,23 @@
             @media (min-width: 768px) { .hero-section { grid-template-columns: 1fr 1fr 1fr; } }
         </style>
         <div class="hero-left relative z-10 px-6 sm:px-8 md:px-[clamp(2rem,3vw,4rem)] text-center md:text-left pointer-events-none"
-             style="margin:0;padding-bottom:0;min-width:0;overflow:visible;align-self:center">
+             style="margin:0;padding-bottom:0;min-width:0;overflow:visible;align-self:center;grid-column:1">
             <span class="block text-[0.5rem] tracking-[0.45em] uppercase text-gold/50 mb-2 pointer-events-none" data-animate="hero-brand">CHRONOS</span>
             <h1 data-animate="hero-brand" class="font-serif text-[clamp(1.6rem,4vw,3rem)] font-semibold leading-none tracking-[0.02em] bg-gradient-to-br from-[#f0ece4] via-[#f0ece4] to-gold bg-clip-text text-transparent pointer-events-none whitespace-nowrap">{{ $config['model'] }}</h1>
             <p data-animate="hero-tagline" class="mt-2 text-[clamp(0.55rem,0.8vw,0.75rem)] font-light tracking-[0.35em] uppercase text-[#8a857f] pointer-events-none">{{ $config['tagline'] ?? 'Precision Redefined' }}</p>
         </div>
             <div class="hero-right relative z-10 px-6 sm:px-8 md:px-[clamp(2rem,3vw,4rem)] text-center md:text-right pointer-events-none"
-                 style="margin:0;min-width:0;overflow:visible;align-self:center">
+                 style="margin:0;min-width:0;overflow:visible;align-self:center;grid-column:3">
                 <p data-animate="hero-price" class="font-serif text-[clamp(1rem,1.5vw,1.3rem)] text-gold pointer-events-none whitespace-nowrap">{{ $config['price'] }}</p>
                 <div class="mt-4 pointer-events-auto" data-animate="hero-cta">
                     <a href="#cta" data-magnetic class="inline-block px-6 py-3 bg-gold text-[#050505] text-[0.65rem] font-semibold tracking-[0.2em] uppercase rounded-sm transition-transform duration-300 hover:bg-gold-hover hover:shadow-[0_8px_32px_rgba(201,169,110,0.3)]" aria-label="Enquire about {{ $config['model'] }}">Enquire Now</a>
                 </div>
             </div>
-            <div class="absolute bottom-16 sm:bottom-20 left-0 right-0 z-20 pointer-events-auto carousel-container flex justify-center px-1 sm:px-0" data-animate="hero-cta"
-                 style="position:absolute;bottom:5rem;left:0;right:0;z-index:20;display:flex;justify-content:center">
-                <span class="block text-center text-[0.35rem] sm:text-[0.4rem] tracking-[0.35em] uppercase text-[#8a857f] mb-1 sm:mb-1.5">Select Variant</span>
-                <div class="flex items-center gap-1 sm:gap-2 bg-[#0c0b0a]/60 backdrop-blur-xl border border-white/[0.04] rounded-full px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 transition-all duration-700 carousel-strip w-full sm:w-fit mx-auto max-w-full">
+            <div class="absolute bottom-16 sm:bottom-20 left-0 right-0 z-20 pointer-events-auto carousel-container px-1 sm:px-0" data-animate="hero-cta"
+                 style="position:absolute;bottom:5rem;left:0;right:0;z-index:20">
+                <div style="width:fit-content;margin:0 auto;text-align:left">
+                <span class="block text-[0.35rem] sm:text-[0.4rem] tracking-[0.35em] uppercase text-[#8a857f] mb-1 sm:mb-1.5">Select Variant</span>
+                <div class="flex items-center gap-1 sm:gap-2 bg-[#0c0b0a]/60 backdrop-blur-xl border border-white/[0.04] rounded-full px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 transition-all duration-700 carousel-strip w-full sm:w-fit max-w-full">
                     <button class="carousel-btn carousel-prev flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center rounded-full border border-white/[0.08] text-[#8a857f] hover:text-gold hover:border-gold/40 transition-all duration-200" aria-label="Previous model">
                         <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"/></svg>
                     </button>
@@ -306,6 +307,7 @@
                     <button class="carousel-btn carousel-next flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center rounded-full border border-white/[0.08] text-[#8a857f] hover:text-gold hover:border-gold/40 transition-all duration-200" aria-label="Next model">
                         <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"/></svg>
                     </button>
+                </div>
                 </div>
             </div>
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-24 bg-gradient-to-b from-transparent via-gold/30 to-transparent pointer-events-none z-10 hidden md:block"
