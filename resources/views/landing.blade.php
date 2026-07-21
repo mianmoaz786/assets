@@ -10,7 +10,7 @@
         $jsA = $m['resources/js/app.js']['file'] ?? null;
         $jsW = $m['resources/js/watch-showcase.js']['file'] ?? null;
         $jsM = $m['resources/js/landing-misc.js']['file'] ?? null;
-        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@b27c2d1';
+        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@4474c62';
     @endphp
     <title>{{ $config['brand'] }} {{ $config['model'] }} — {{ $config['tagline'] ?? 'Precision Redefined' }}</title>
     <meta name="description" content="{{ $config['description'] ?? $config['model'] . ' by ' . $config['brand'] . '. Precision redefined. Swiss-made luxury timepiece.' }}">
@@ -43,6 +43,7 @@
     <link rel="apple-touch-icon" href="{{ $a }}/favicon.svg">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preload" href="{{ $a }}/images/models/invicta.webp" as="image" fetchpriority="high" crossorigin>
 
     <script type="application/ld+json">
     {
@@ -108,13 +109,6 @@
     <script>window.WATCH_CONFIG = @json($config); window.WATCH_CONFIG.assetBaseUrl = '{{ $a }}';</script>
     <link rel="preload" href="{{ $a }}/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
     <link rel="preload" href="{{ $a }}/fonts/playfair-variable.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
-    @php
-        $threeChunk = null;
-        foreach ($m as $key => $val) {
-            if (isset($val['name']) && $val['name'] === 'three') { $threeChunk = $val['file']; break; }
-        }
-    @endphp
-    @if($threeChunk)<link rel="modulepreload" href="{{ $a }}/build/{{ $threeChunk }}" crossorigin>@endif
     @if($jsW)<link rel="modulepreload" href="{{ $a }}/build/{{ $jsW }}" crossorigin>@endif
     @if($css)<link rel="stylesheet" href="{{ $a }}/build/{{ $css }}">@endif
     @if($jsA)<script type="module" src="{{ $a }}/build/{{ $jsA }}" defer></script>@endif
@@ -323,7 +317,7 @@
     <div id="content-reveal">
 
     <section class="relative h-[70vh] md:h-[85vh] overflow-hidden bg-[#050505]" id="model-hero-section" aria-label="Featured model">
-        <img id="model-hero-img" class="absolute inset-0 w-full h-full object-cover opacity-60 md:opacity-70 transition-[opacity,transform] duration-700" src="{{ $a }}/images/models/invicta.webp" alt="" width="1920" height="1080" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw">
+        <img id="model-hero-img" class="absolute inset-0 w-full h-full object-cover opacity-60 md:opacity-70 transition-[opacity,transform] duration-700" src="{{ $a }}/images/models/invicta.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async" sizes="(max-width: 768px) 100vw, 50vw">
         <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
         <div class="absolute bottom-10 md:bottom-16 left-1/2 -translate-x-1/2 text-center w-full px-6">
             <span class="text-[0.5rem] tracking-[0.4em] uppercase text-gold">Featured Timepiece</span>

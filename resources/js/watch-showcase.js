@@ -388,7 +388,7 @@ async function init() {
     const _hpSrc = document.getElementById('model-hero-price');
     if (_hp && _hpSrc) _hp.textContent = _hpSrc.textContent;
     const reduced = prefersReducedMotion();
-    const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+    const ScrollTrigger = window.ScrollTrigger;
     gsap.registerPlugin(ScrollTrigger);
 
     // -- Model switching with lazy load + disposal --
@@ -664,13 +664,19 @@ async function init() {
             'label-hands': currentModel.getObjectByName('secondHandPivot'), 'label-case': currentModel.getObjectByName('case'),
             'label-movement': currentModel.getObjectByName('rotor'), 'label-strap': currentModel.getObjectByName('strapUpper'),
         };
+        // Batch read all positions first, then batch write styles
+        const reads = [];
         Object.entries(tgts).forEach(([id, obj]) => {
             const el = document.getElementById(id);
             if (!el || !obj) return;
             const wp = new Vector3(); obj.getWorldPosition(wp); wp.y += 0.5;
             const sp = wp.clone().project(camera);
-            el.style.left = ((sp.x * 0.5 + 0.5) * w) + 'px';
-            el.style.top = ((-sp.y * 0.5 + 0.5) * h) + 'px';
+            reads.push({ el, x: (sp.x * 0.5 + 0.5) * w, y: (-sp.y * 0.5 + 0.5) * h });
+        });
+        // Single batch write
+        reads.forEach(({ el, x, y }) => {
+            el.style.left = x + 'px';
+            el.style.top = y + 'px';
         });
     }
 
