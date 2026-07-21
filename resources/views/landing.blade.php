@@ -10,7 +10,7 @@
         $jsA = $m['resources/js/app.js']['file'] ?? null;
         $jsW = $m['resources/js/watch-showcase.js']['file'] ?? null;
         $jsM = $m['resources/js/landing-misc.js']['file'] ?? null;
-        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@f84410e';
+        $a = 'https://cdn.jsdelivr.net/gh/mianmoaz786/assets@06531a8';
     @endphp
     <title>{{ $config['brand'] }} {{ $config['model'] }} — {{ $config['tagline'] ?? 'Precision Redefined' }}</title>
     <meta name="description" content="{{ $config['description'] ?? $config['model'] . ' by ' . $config['brand'] . '. Precision redefined. Swiss-made luxury timepiece.' }}">
@@ -124,6 +124,7 @@
         @font-face { font-family:'Playfair Display'; font-style:normal; font-weight:400 700; font-display:optional; src:url('{{ $a }}/fonts/playfair-variable.woff2') format('woff2-variations'); }
         [x-cloak] { display: none !important; }
         .fixed { position: fixed !important; }
+        .absolute { position: absolute !important; }
         html { overflow-x: hidden; }
         html, body { background-color: #050505; color: #f0ece4; margin: 0; padding: 0; font-family:'Inter',ui-sans-serif,system-ui,sans-serif; }
         /* Critical above-fold styles (renders before full CSS loads) */
@@ -280,7 +281,8 @@
                     <a href="#cta" data-magnetic class="inline-block px-6 py-3 bg-gold text-[#050505] text-[0.65rem] font-semibold tracking-[0.2em] uppercase rounded-sm transition-transform duration-300 hover:bg-gold-hover hover:shadow-[0_8px_32px_rgba(201,169,110,0.3)]" aria-label="Enquire about {{ $config['model'] }}">Enquire Now</a>
                 </div>
             </div>
-            <div class="absolute bottom-16 sm:bottom-20 left-1/2 -translate-x-1/2 z-20 pointer-events-auto carousel-container w-full max-w-[98vw] sm:max-w-none px-1 sm:px-0" data-animate="hero-cta">
+            <div class="absolute bottom-16 sm:bottom-20 left-1/2 -translate-x-1/2 z-20 pointer-events-auto carousel-container w-full max-w-[98vw] sm:max-w-none px-1 sm:px-0" data-animate="hero-cta"
+                 style="position:absolute;bottom:5rem;left:50%;transform:translateX(-50%);z-index:20">
                 <span class="block text-center text-[0.35rem] sm:text-[0.4rem] tracking-[0.35em] uppercase text-[#8a857f] mb-1 sm:mb-1.5">Select Variant</span>
                 <div class="flex items-center gap-1 sm:gap-2 bg-[#0c0b0a]/60 backdrop-blur-xl border border-white/[0.04] rounded-full px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 transition-all duration-700 carousel-strip w-full sm:w-fit mx-auto max-w-full">
                     <button class="carousel-btn carousel-prev flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center rounded-full border border-white/[0.08] text-[#8a857f] hover:text-gold hover:border-gold/40 transition-all duration-200" aria-label="Previous model">
@@ -303,8 +305,10 @@
                     </button>
                 </div>
             </div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-24 bg-gradient-to-b from-transparent via-gold/30 to-transparent pointer-events-none z-10 hidden md:block"></div>
-        <div data-animate="scroll-cue" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10" aria-hidden="true">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-24 bg-gradient-to-b from-transparent via-gold/30 to-transparent pointer-events-none z-10 hidden md:block"
+             style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10"></div>
+        <div data-animate="scroll-cue" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10" aria-hidden="true"
+             style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:10">
             <span class="text-[0.5rem] tracking-[0.4em] uppercase text-[#8a857f]">Scroll to explore</span>
             <svg class="w-3 h-3 text-[#8a857f] animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
         </div>
